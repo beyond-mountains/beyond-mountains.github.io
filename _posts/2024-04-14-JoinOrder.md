@@ -18,11 +18,11 @@ select * from A, B, C, D;
 
 我们将连接顺序抽象成 二叉树 的形式
 
-<img src="/assets/img/PictureJoinOrder/LeftTree.jpg" style="zoom:50%;" />
+<img src="/assets/img/PictureJoinOrder/LeftTree.jpg" style="zoom:50%;" alt="二叉树"/>
 
 表A 和 表B 连接，AB的中间结果与C连接，ABC的中间结果与D连接，形成最终结果。
 
-<img src="/assets/img/PictureJoinOrder/SomeJoinOrder.jpg" style="zoom:50%;" />
+<img src="/assets/img/PictureJoinOrder/SomeJoinOrder.jpg" style="zoom:50%;" alt="不同连接顺序的二叉树"/>
 
 但是连接的顺序并不一定按照 A——B——C——D，可以对 A B C D 进行排序，对于这 4 个表的情况，共有 $ 4! = 24 $ 种排列方式。
 
@@ -30,7 +30,7 @@ select * from A, B, C, D;
 
 如果我们不只是将连接顺序表示成 左深树 ，那么会有其他的树形结构
 
-<img src="/assets/img/PictureJoinOrder/JoinOrderTree.jpg" style="zoom:50%;" />
+<img src="/assets/img/PictureJoinOrder/JoinOrderTree.jpg" style="zoom:50%;" alt="5种树型结构"/>
 
 对于四个表连接的情况，可以有 5 种树型结构。
 
@@ -63,7 +63,7 @@ $T(n)$ 的前几个值为
 
 如果两个表有相同的属性，且SQL语句中有限制条件，那么这两个表可以根据这个属性进行连接。
 
-<img src="/assets/img/PictureJoinOrder/Relations.jpg" style="zoom:50%;" />
+<img src="/assets/img/PictureJoinOrder/Relations.jpg" style="zoom:50%;" alt="三种不同的关系图"/>
 
 上图中有三种不同的关系结构，结点之间的连线表示这两个表有相同的属性。
 
@@ -78,7 +78,7 @@ and C.attr3 = D.attr3;
 
 可以给出 5 种连接顺序：
 
-<img src="/assets/img/PictureJoinOrder/JoinOrderTree.jpg" style="zoom:50%;" />
+<img src="/assets/img/PictureJoinOrder/JoinOrderTree.jpg" style="zoom:50%;" alt="链式结构的5种连接顺序"/>
 
 对于第二种星型结构，有 6 种连接顺序；对于第三种环形结构，有 10 种连接顺序。
 
